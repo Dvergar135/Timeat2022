@@ -1,0 +1,57 @@
+public class User{
+private String name; //Username
+private String email; // Email
+private String password; 
+private ArrayList<User> Reservations = newArrayList<User>; //Owners Reservation List 
+
+//Booker
+public User(){
+}
+public User(String n, String e, String p)
+  name = n;
+  email = e;
+  password = p;
+}
+//Owner
+public String getName(){
+  return this.name;
+}
+public String getEmail(){
+  return this.email;
+}
+public String getPassword(){
+  return this.password;
+}
+public ArrayList<User> getReservations(){
+  return Reservations;
+}
+public Arraylist<Book> getBookList(){
+  return BookList;
+}
+// add Book in BookList
+ public void addReservation(Book BK){
+        getBookList().add(BK);
+    }
+    //Prints all Reservations
+    public void printBook(){
+      for (Reservation i : BookList){
+        System.out.println("-----------------------------------")
+        System.out.println(i.getId() + "(" + BookList.indexOf(i) + ")\n");
+      }
+    }
+  //Create new Reservation
+    public void newBook(Network net){
+      System.out.print("Choose Shop:\n");
+      net.printBookingCandidates(this);
+      int i;
+          int[] choices = new int[net.getUserList().size()];
+          for(i = 0;i < net.getUserList().size(); i++){
+              choices[i] = i;
+          }
+      User rec = new User();
+      rec = net.UserList().get(xxxxx(choice));
+      Book BK = new Book(this, rec);
+      rec.addBook(BK)
+    }
+
+}
