@@ -1,0 +1,25 @@
+class Book{
+
+  private String timestamp;
+  private String state;
+  private String id;
+  private User booker;
+  private User owner;
+  
+  public void setState(String state){
+    this.state = state;
+  }
+  public User getBooker(){
+    return this.booker;
+  }
+  public String getId(){
+    return this.id;
+  }
+  public Book(User book, User rec){
+    Date currentDate = new Date();
+    this.timestamp = currentDate.toString();
+    this.state = "Pending";
+    this.recipent = rec;
+    this.id = "From" + send.setName() + " To: " + rec.getName();
+  }
+}  
